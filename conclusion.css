@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    /*background: #7639bb;*/
+    /*background: linear-gradient(to right, #ff7e5f, #feb47b);*/  /*para degradar un color*/
+    /* background: linear-gradient(to right,#e463a3, #cc38c5); */
+    background-color: rgb(58, 55, 55); 
+    
+}
+/*opciones ENCABEZADO***********/
+header{
+    background: #222020;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Lucida Sans Unicode';
+}
+
+header h2{
+    color: #7639bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.opciones li{
+    display: inline-block;
+}
+
+.opciones a{
+    text-decoration: none;
+    color:#fcfaf5;
+    display: block;
+    padding: 20px 10px; /*le ponemos un cuadrado*/
+    font-size: 14px;
+}
+
+/*conclusionesssss*/
+.titulo{
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.conclusion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.contenedor{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;  /*maximo de ancho*/
+}
+
+.card{
+    width: 100%;
+    margin: 20px; /*margen*/
+    border-radius: 6px; /*redondeado*/
+    overflow: hidden; /* elemento fuera del contenedor card se oculte*/
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2); /*sombra a tarjeta*/
+    cursor: default; /*fechita no rayita*/
+    transition: all 400ms ease; /*transicion de efecto suave*/
+}
+
+.card:hover{ /*dar efecto con hover*/
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4); /* al pasar el cursor aumenta la sombre*/
+    transform: translateY(-3%); /* cada tarjeta se mueve hacia arriba -3%*/
+}
+
+.card img{ /* clase card tarjeta img*/
+    width: 100%;
+    height: 200px; /*alto de las imagenes*/
+}
+
+.card .contenido{
+    padding: 15px; /*relleno*/
+    text-align: center; /*centrado*/
+}
+.card .contenido p{
+    line-height: 1.5; /*interlineado (espacio entre lineas)*/
+    color: #310d0d;
+    font-size: 12px;
+}
+.card .contenido h3{
+    font-weight: 400; /*reducir negrita*/
+    margin-bottom: 15px; /*empuja al parrafo mas abajito*/
+}
+
+.card .contenido a{
+    text-decoration: none; /*saca la rayita que tiene por defecto la etiqueta a*/
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px; /*empujar hacia abajo*/
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc; /*borde de 1px solido como boton*/
+    border-radius: 4px; /*lo cambia a borde redondito*/
+    transition: all 400ms ease;
+}
+
+.card .contenido a:hover{ /*efecto al pasar el cursor sobre boton*/
+    background: #2fb4cc; /*fondo*/
+    color: #fff; /*color a la letra */
+}
+

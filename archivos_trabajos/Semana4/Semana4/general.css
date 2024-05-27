@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+body {
+    font-family: "Poetsen One", sans-serif;
+}
+h3{
+color: blueviolet;
+border-bottom: 2px solid rgb(187, 95, 248);
+}
+
+button{
+    background-color: rgb(133, 133, 236);
+    border-radius: 5px;
+    height: 40px;
+}

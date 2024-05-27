@@ -1,0 +1,210 @@
+/* ejercicio 21*/
+.boton{
+    color: black;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 15px 15px;
+    
+
+}
+
+.success{
+    background-color: rgb(52, 221, 89);
+    border-color: #45a049;
+}
+.success:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+  }
+
+.danger{
+    background-color: rgb(240, 82, 34);
+    border-color: #df1111;
+}
+.danger:hover {
+    background-color: #df1111; /* Color de fondo al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+  }
+
+.primary{
+    background-color: rgb(74, 46, 235);
+    border-color: #1f08f1;
+}
+.primary:hover {
+    background-color: #1f08f1; /* Color de fondo al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+  }
+
+  .warning{
+    background-color: rgb(221, 247, 74);
+    border-color: #f1ed08;
+}
+.warning:hover {
+    background-color: #f1ed08; /* Color de fondo al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+  }
+
+  .secondary{
+    background-color: rgb(72, 80, 87);
+    border-color: #838380;
+}
+.secondary:hover {
+    background-color: #838380; /* Color de fondo al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+  }
+
+  .info{
+    background-color: rgb(18, 126, 221);
+    border-color: #6289f3;
+}
+.info:hover {
+    background-color: #6289f3; /* Color de fondo al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+  }
+
+
+  /* botones ejercicio 22*/
+
+  .fa{
+    padding: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 5px 2px;
+
+  }
+  .fa:hover{
+    opacity: 0.7;
+  }
+
+  .fa-facebook{
+    background: #1f08f1;
+    color: aliceblue;
+  }
+
+  .fa-twitter{
+    background: #16a6b9;
+    color: aliceblue;
+    
+  }
+
+  .fa-google{
+    background: #a0b916;
+    color: aliceblue;
+    
+  }
+
+  .fa-instagram{
+    background:#9b04af;
+    color: aliceblue;
+  }
+
+  .fa-pinterest{
+    background: #df1111;
+    color:aliceblue;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+  .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  .fa-skype {
+    background: #00aff0;
+    color: white;
+  }
+  .fa-android {
+    background: #a4c639;
+    color: white;
+  }
+  .fa-dribbble {
+    background: #ea4c89;
+    color: white;
+  }
+  .fa-vimeo {
+    background: #45bbff;
+    color: white;
+  }
+  .fa-tumblr {
+    background: #2c4762;
+    color: white;
+  }
+  .fa-vine {
+    background: #00b489;
+    color: white;
+  }
+  .fa-foursquare {
+    background: #45bbff;
+    color: white;
+  }
+  .fa-stumbleupon {
+    background: #eb4924;
+    color: white;
+  }
+  .fa-flickr {
+    background: #f40083;
+    color: white;
+  }
+  .fa-yahoo {
+    background: #430297;
+    color: white;
+  }
+  .fa-soundcloud {
+    background: #ff5500;
+    color: white;
+  }
+  .fa-reddit {
+    background: #ff5700;
+    color: white;
+  }
+  .fa-rss {
+    background: #ff6600;
+    color: white;
+  }
+
+  /*loading ejercicio 23*/
+  .bolita{
+    border: 6px solid rgba(0, 0, 0, 0.1); /* Tamaño y color del anillo */
+    border-top: 6px solid #590b8d; /* Color del borde superior */
+    border-radius: 50%; /* Hace que el borde sea redondeado */
+    width: 60px; /* Tamaño del anillo */
+    height: 60px; /* Tamaño del anillo */
+    animation: spin 1s linear infinite; /* Animación infinita */
+    margin: auto; /* Centra el anillo horizontalmente */
+    margin-top: 20vh; /* Centra el anillo verticalmente */
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg); /* Gira el anillo desde 0 grados */
+    }
+    100% {
+      transform: rotate(360deg); /* Gira el anillo a 360 grados (una vuelta completa) */
+    }
+  }

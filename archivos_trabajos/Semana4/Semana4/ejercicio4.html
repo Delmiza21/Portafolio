@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabla de Estudiantes</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <h1>Tabla de Estudiantes</h1>
+
+    <!-- Botón para mostrar la tabla -->
+
+    <table id="tablaEstudiantes">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Dirección</th>
+          <th>Teléfono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se agregarán dinámicamente las filas de la tabla -->
+      </tbody>
+    </table>
+
+    <script>
+        const estudiantes = [
+  { id: 1, nombre: "Juan", direccion: "Calle A #123", telefono: "555-1234" },
+  { id: 2, nombre: "María", direccion: "Avenida B #456", telefono: "555-5678" },
+  { id: 3, nombre: "Carlos", direccion: "Calle C #789", telefono: "555-9012" },
+  { id: 4, nombre: "Laura", direccion: "Avenida D #321", telefono: "555-3456" },
+  { id: 5, nombre: "Pedro", direccion: "Calle E #654", telefono: "555-7890" },
+  { id: 6, nombre: "Ana", direccion: "Avenida F #987", telefono: "555-2345" },
+  { id: 7, nombre: "Pablo", direccion: "Calle G #210", telefono: "555-6789" },
+  { id: 8, nombre: "Sofía", direccion: "Avenida H #543", telefono: "555-1234" },
+  { id: 9, nombre: "Luis", direccion: "Calle I #876", telefono: "555-5678" },
+  {
+    id: 10,
+    nombre: "Elena",
+    direccion: "Avenida J #109",
+    telefono: "555-9012",
+  },
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tablaBody = document.querySelector("#tablaEstudiantes tbody");
+
+  // Recorrer el array de estudiantes y crear filas de tabla
+  estudiantes.forEach((estudiante) => {
+    const fila = document.createElement("tr");
+    fila.innerHTML = `
+      <td>${estudiante.id}</td>
+      <td>${estudiante.nombre}</td>
+      <td>${estudiante.direccion}</td>
+      <td>${estudiante.telefono}</td>
+    `;
+    tablaBody.appendChild(fila);
+  });
+});
+    </script>
+  </body>
+</html>

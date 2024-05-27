@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    /*background: #7639bb;*/
+    /*background: linear-gradient(to right, #ff7e5f, #feb47b);*/  /*para degradar un color*/
+    /* background: linear-gradient(to right,#e463a3, #cc38c5); */
+    /* background-color: rgb(53, 50, 50); */
+    
+    background-image: url(imagenes/trabajos.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+/*opciones ENCABEZADO***********/
+header{
+    background: #222020;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Lucida Sans Unicode';
+}
+
+header h2{
+    color: #7639bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.opciones li{
+    display: inline-block;
+}
+
+.opciones a{
+    text-decoration: none;
+    color:#fcfaf5;
+    display: block;
+    padding: 20px 10px; /*le ponemos un cuadrado*/
+    font-size: 14px;
+}
+
+/*TRABAJOS REALIZADOS*/
+.trabajo{
+    height: 200px;
+}
+.impar{
+    background: linear-gradient(to right,#b463e4, #803cce);
+}
+.par .pregunta{
+    background: rgba(34, 31, 31, 0.5);
+    height: 200px;
+}
+.pregunta{
+    padding: 20px 35px;
+    
+}
+.pregunta h2{
+    margin-bottom: 10px;
+}
+.pregunta p{
+    margin-bottom: 10px;
+}
+.btn{
+    padding: 16px;
+    border-radius: 6px;
+    background-color: #522981;
+    color: #fcfaf5;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+.btn:hover{
+   background: #343038 ; 
+}

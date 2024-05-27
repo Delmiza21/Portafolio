@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    /*background: #7639bb;*/
+    /*background: linear-gradient(to right, #ff7e5f, #feb47b);*/  /*para degradar un color*/
+    /* background: linear-gradient(to right,#e463a3, #cc38c5); */
+    background-color: rgb(53, 50, 50);
+    
+}
+/*opciones ENCABEZADO***********/
+header{
+    background: #222020;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Lucida Sans Unicode';
+}
+
+header h2{
+    color: #7639bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.opciones li{
+    display: inline-block;
+}
+
+.opciones a{
+    text-decoration: none;
+    color:#fcfaf5;
+    display: block;
+    padding: 20px 10px; /*le ponemos un cuadrado*/
+    font-size: 14px;
+}
+
+/*SEMANA 1*/
+.definicion{
+    font-family: "Crimson Text", serif;
+    padding: 20px;
+    color: #fcfaf5;
+}
+.definicion h1{
+    padding: 15px;
+    text-align: center;
+}
+.inicio{
+    display: flex;
+}
+.parte1{
+    color: #fcfaf5;
+    margin-left: 20px;
+    width: 50%;
+}
+.parte1 span{
+    color: #e2123f;
+    font-weight: bold;
+}
+.img{
+   width: 480px; 
+   height: 310px;
+}
+.img img{
+    width: 100%;
+    height: 310px;
+    margin-left: 50px;
+}
+
+.procedimento{
+    color: #fcfaf5;
+    padding: 20px;
+}
+.procedimento span{
+    color: #e2123f;
+    font-weight: bold;
+}
+.procedimento .img2{
+    margin-top: 30px;
+    text-align: center;
+}
+.procedimento .img2 img{
+    width: 800px;
+    height: 400px;
+   
+}
+
+.resultado{
+    color: #fcfaf5;
+    padding: 20px;
+}
+.resultado span{
+    color: #e2123f;
+}
+
+

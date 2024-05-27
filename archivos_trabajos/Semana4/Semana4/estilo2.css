@@ -1,0 +1,24 @@
+#tablaEstudiantes {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tablaEstudiantes th, #tablaEstudiantes td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#tablaEstudiantes th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para las filas impares */
+#tablaEstudiantes tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para las filas al pasar el ratón */
+#tablaEstudiantes tbody tr:hover {
+    background-color: #e9e9e9;
+}

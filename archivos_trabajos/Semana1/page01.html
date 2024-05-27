@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Usando el plugin Emmet</h1>
+    <h2>Utilizando hermanos</h2>
+    
+    <h2>Utilizando hijo</h2>
+    <div>
+        <p></p>
+    </div>
+
+    <h2>Utilizando la multiplicion</h2>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <p><strong></strong></p>
+    <p><strong></strong></p>
+
+    <h2>Utilizando contenido</h2>
+    <a href="">link</a>
+    <h2>Utilizando clases y ID</h2>
+    <div class="clase01"></div>
+    <!--div.clase01-->
+    <div id="estidolo"></div>
+    <!--div#estidolo-->
+    <h2>Utilizando atributos</h2>
+    <img src="img.jpg" alt="">
+    <h2>Utilizando enumeracion e iteracion</h2>
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ol>
+
+    <!--usando shifalt mas la flecha para copiar hacia abajo primero selecciona-->
+    <h2>g</h2>
+    <h2>hola</h2>    
+    <h2>hola</h2>    
+    <h2>hola</h2>    
+    <h2>hola</h2>    
+    <h2>hola</h2>    
+
+    <!--practicaas -->
+    <!--practicaas 1-->
+    header#header>div#menu>(li>a)*5
+    
+    <!--practicaas 2 -->
+    header+nav+(section>article)+aside+footer
+    
+    nav>(header#header>nav#nav>(section#section>article#article)+aside#aside)+footer#footer
+    <!--practicaas 3 -->
+    table>thead>tr>th#id+th#nombres+th#apellido+th#direcion+tbody>tr*20>td{$}
+
+    table>thead>tr>th#id+th#nombres+th#apellidos+th#direccion+tbody>tr*20>(th{$}+td*3)
+    <!--practicaas 4 -->
+    table>thead>tr>th*2+thbody>tr*20>td{fila $@-}
+    
+    table>tbody>tr*20>td{Fila$$}
+    <!--practica 5-->
+    table.tabla>thead>tr>th{"#"}+th{firt}+th{second}+th{tree}+thbody>tr*3>th{$}+th{mark}+th{otto}+th{jonson}
+    table.table>(thead>tr>th[scope=col]{0}+th[scope=col]{First}+th[scope=col]{Second}+th[scope=col]{Tree})+(tbody>(tr>th[scope=row]{$}+td{Mark}+td{Otto}+td{Jhonson})*3)
+
+
+</body>
+</html>

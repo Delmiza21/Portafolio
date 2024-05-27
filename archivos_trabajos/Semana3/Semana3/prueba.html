@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Carousel</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .slide {
+            transition: transform 0.5s ease-in-out;
+            
+        }
+
+    </style>
+</head>
+
+<body >
+    <div class="relative">  
+        <!-- Carrusel  arriba antes estaba "max-w-xl w-screen" en vez de relative -->
+        <div class="relative overflow-hidden">
+            <!-- Imágenes -->
+            <div class="flex">
+                <div class="slide w-screen  flex-shrink-0">
+                    <img src="img34/imagen1.png" alt="Image 1" class="w-full">
+                </div>
+                <div class="slide w-screen flex-shrink-0 hidden">
+                    <img src="img34/images2.png" alt="Image 2" class="w-full">
+                </div>
+                <div class="slide w-screen flex-shrink-0 hidden">
+                    <img src="img34/imagen1.png" alt="Image 3" class="w-full">
+                </div>
+            </div>
+            <!-- Botones de navegación -->
+            <div class="absolute top-1/2 transform -translate-y-1/2 flex justify-between w-full px-4">
+                <button onclick="prevSlide()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l">
+                    Anterior
+                </button>
+                <button onclick="nextSlide()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r">
+                    Siguiente
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach(slide => {
+                slide.classList.add('hidden');
+            });
+            slides[index].classList.remove('hidden');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Mostrar la primera imagen al cargar la página
+        showSlide(currentSlide);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-color:#df1d1d;
+    margin: 10px; /*espacio como un bordecito es el blanco*/
+    /*padding: 50px;*/
+    height: 80px;
+}
+
+/*AUMETNADO*/
+/*esta clase es del sanguchito*/
+.logo{
+    position: absolute;
+}
+.checkbtn{
+    font-size: 30px;
+    color: aliceblue;
+    float: right;
+    line-height: 80px;/*lo centra segun alto del header*/
+    margin-right: 20px; /*lo separa del borde de la derecha*/
+    display: none; /*ocultamos*/
+}
+#check{
+    display: none;
+}
+header ul{
+    float: right; /* a la derecha*/
+    list-style: none;
+}
+header ul li{
+    display: inline-block;
+    line-height: 80px;
+    padding: 0 15px;
+
+}
+header ul li:hover{
+    background-color:#ff25;
+}
+/*AQUI TERMINA EL AUMENTADO*/
+.home{
+    display: flex;
+    flex-wrap: wrap; /*se ponga uno de tras del otro*/
+    height: 100vh;
+}
+
+.flexi{
+    background-color:#ff25;
+    flex: 1;
+    padding: 15px;
+    min-width: 250px;
+}
+
+.a{
+    background-color: aqua;
+    padding: 10px;
+    margin: 10px;
+}
+
+.b{
+    background-color: rgb(24, 116, 116);
+    padding: 10px;
+    margin: 10px;
+}
+.c{
+    background-color: rgb(17, 18, 107);
+    padding: 10px;
+    margin: 10px;
+}
+
+footer{
+    background-color: rgb(89, 6, 92); 
+    padding: 50px;
+}
+
+/*aqui podemos aplicar varias cosas lo anterior*/
+/*es general para lo responsivo en este caso solo para sanguchto pero puede aplicar para el responsivo*/
+@media (max-width:850px){
+    .checkbtn{
+        display: block;/*mostramos el boton*/
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #c0a8a8;
+        top:80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    header ul li{
+        display: block;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}

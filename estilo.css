@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans Unicode';
+}
+/*ESTILOS GENERALESSSS *********************************************************************/
+body{
+    /*background: #7639bb;*/
+    /*background: linear-gradient(to right, #ff7e5f, #feb47b);*/  /*para degradar un color*/
+    background: linear-gradient(to right,#b463e4, #803cce);
+}
+/*opciones ENCABEZADO***********/
+header{
+    background: #181717;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h2{
+    color: #7639bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.opciones li{
+    display: inline-block;
+}
+
+.opciones a{
+    text-decoration: none;
+    color:#fcfaf5;
+    display: block;
+    padding: 20px 10px; /*le ponemos un cuadrado*/
+    font-size: 14px;
+}
+
+/*botoncito menu**********/
+#check{
+    display: none;
+}
+.checkbtn{
+    font-size: 25px;
+    color: aliceblue;
+    float: left;/*izquierda*/
+    line-height: 50px;
+    margin-left: 20px; 
+    display: none;
+}
+
+
+/*HTML     ****PORTADA*/
+.contenido{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.foto{
+    background: #181717;
+    color: aliceblue;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.foto_delmi{
+    height: 300px;
+    width: 300px;
+    border-radius: 800px;
+    padding: 30px 30px; /*espacio arriba y abajo*/
+}
+
+.redes{
+    padding: 10px 10px;
+}
+.redes a{
+    font-size: 20px;
+}
+.fa{
+    
+    border-radius: 20px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+}
+.fa-facebook{
+    background: #2a2dbe;
+    color: aliceblue;
+    text-decoration: none;
+    border-color: beige;
+     
+}
+.fa-whatsapp{
+    background: #24b143;
+    color: aliceblue;
+    text-decoration: none;
+}
+.fa-instagram{
+    background: #d837c3;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/*html BIENVENIDO*/
+.seccion{
+    display: flex;
+    background-image: url(imagenes/fis_pabellon.jpg);
+    background-size: cover; /* Para ajustar la imagen al tamaño del elemento */
+    background-position: center; /* Para centrar la imagen en el elemento */
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.describe{
+    /*margin-left: 90px;*/
+    margin: 0 120px;
+    margin-top: 200px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.describe h1{
+    margin-left: 40px;
+    margin-top: 10px;
+    font-family: "Poetsen One", sans-serif;
+}
+.describe p{
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: "Poetsen One", sans-serif;
+}
+.foto2{
+    border: 4px solid #f2f1f5;
+    /*border-radius: 20px;*/
+    margin-right: 100px;
+    margin-top: 20px;
+}
+.foto_delmiza{
+    height: 350px;
+    width: 320px;
+    padding: 15px;
+    /*border-radius: 50px;*/
+}
+.intro{
+    display: block;
+    height: 350px;
+    
+}
+.intro h1{
+    text-align: center;
+    margin-top: 150px;
+    font-family: "Poetsen One", sans-serif;
+    
+}
+.intro p{
+    padding: 20px 80px;
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+}
+
+/*HTML CUADERNO PERSONAL*******/
+.cuaderno{
+    margin-top: 20px;
+    background-color: #f2f1f5;
+}
+.cuaderno h1{
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    color: #070707;
+    border: 2px solid #0c0c0c;
+}
+.fila{ /*contiene a los 3 rectangulos*/
+    display: flex;
+    justify-content: center;
+}
+.cuadrado{
+    /*width: 100%;*/ /*ancho*/
+    /*height: 100vh;*/ /* altura completa de la ventana*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*position: relative;*/
+    padding: 25px 10px;
+}
+
+.imagen{
+    width: 300px; /*ancho que incluye img + txt*/
+    height: 160px;
+    position: relative;
+
+}
+
+.img_semana{ /*etiqueta img*/
+    width: 100%;
+    height: 160px;
+    display: block;
+    margin: auto;
+    border-radius: 9px;
+}
+
+.texto{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*uno sobre otro*/
+    opacity: 0; /*fondo(background) y text desaparece*/ 
+    transition: 0.6s; /*tiempo en que desaparece fondo y txt*/
+    border-radius: 9px;
+}
+
+/*efecto al poner cursor*/
+.texto:hover{
+    opacity: 1; 
+    
+}
+.texto h2{
+    font-size: 20px;
+    color: #fbff00;
+    margin-bottom: 15px;
+}
+.texto a{
+    text-decoration: none;
+}
+.texto p{
+    font-size: 14px;
+    color: #fff;
+}
+
+.texto > *{  /* afecta a los ELEMENTOS de la clase texto (en este caso tengo solo 2 txt) */
+    transform:translateY(25px); /*baje 25px*/
+    transition: transform 0.6s; /* bajar en un tiempo de */
+}
+.texto:hover > *{ /* afecta a clase texto efecto hover anterior*/
+    transform:translateY(0px); /*devolver a posicion anterior*/
+}
+
+/*html SOBRE MI*****************/
+.sobremi{
+    margin-top: 20px;
+
+}
+.contenido-seccion{
+    text-align: center;
+}
+.contenido-seccion h2{
+    font-size: 30px;
+    font-family: 'Righteous';
+}
+.sobremi .contenido-seccion p{
+    padding: 25px;
+    text-align: left;
+    
+    
+}
+
+.fila{
+    display: flex;
+    margin-top: 50px;
+}
+.fila .col
+{
+    width: 50%;
+}
+.fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.fila .col ul{
+    list-style: none;
+}
+.fila .col ul li{
+    margin: 12px 0;
+    text-align: left;
+    margin-left: 120px;
+}
+
+.fila .col ul li strong{
+    display: inline-block;
+    color: #000000;
+    width: 130px;
+}
+.fila .col ul li span{
+    background-color: #f12674;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 80px;
+}
+.fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.fila .col .contenedor-intereses .interes:hover{
+    background-color: #8a45e4;
+}
+
+.fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/*BIOGRAFIA*/
+.tituloBio h1{
+    padding: 15px;
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+}
+.bibliografias{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.bibliografias ul li a{
+    color: #efedf1;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+@media (max-width:860px){
+    .checkbtn{
+        display: block;
+    }
+    .opciones ul{
+        position: fixed;
+        z-index: 1;
+        width: 240px;
+        height: 490px;
+        background: rgb(36, 36, 58);
+        top:57px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    header .opciones ul li{
+        display: block;
+    }
+    
+    #check:checked ~ .opciones ul{
+        left: 0;
+    }
+}

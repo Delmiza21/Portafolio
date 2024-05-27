@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Estudiantes</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+    <h3>EJERCICIO 5 Tabla</h3>
+    <table id="tablaEstudiantes">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Apellidos</th>
+                <th>Nombres</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tbody id="tablaBody">
+            <!-- Los datos de los estudiantes se añadirán aquí dinámicamente -->
+        </tbody>
+    </table>
+
+    <script>
+        // Definición de la clase Estudiante
+class Estudiante {
+    constructor(id, apellidos, nombres, direccion, telefono) {
+        this.id = id;
+        this.apellidos = apellidos;
+        this.nombres = nombres;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+}
+
+// Crear un array con 10 objetos Estudiante
+var estudiantes = [
+    new Estudiante(1, "García", "Juan", "Calle 123", "123456789"),
+    new Estudiante(2, "López", "María", "Avenida 456", "987654321"),
+    new Estudiante(3, "Martínez", "Pedro", "Carrera 789", "456123789"),
+    // Añade los datos de los otros estudiantes aquí
+];
+
+// Obtener el cuerpo de la tabla
+var tablaBody = document.getElementById("tablaBody");
+
+// Iterar sobre el array de estudiantes y agregar cada estudiante a la tabla
+estudiantes.forEach(function(estudiante) {
+    var fila = document.createElement("tr");
+    fila.innerHTML = `
+        <td>${estudiante.id}</td>
+        <td>${estudiante.apellidos}</td>
+        <td>${estudiante.nombres}</td>
+        <td>${estudiante.direccion}</td>
+        <td>${estudiante.telefono}</td>
+    `;
+    tablaBody.appendChild(fila);
+});
+    </script>
+</body>
+</html>

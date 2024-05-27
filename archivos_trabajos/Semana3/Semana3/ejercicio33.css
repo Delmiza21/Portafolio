@@ -1,0 +1,53 @@
+.container{
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+.fila{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    width: calc(100% / 12);
+    text-align: center;
+    border: 1px solid #000;/*para darle bordecito*/
+    box-sizing: border-box;
+}
+
+.fondo1{
+  background-color: rgb(4, 68, 47);
+}
+.fondo2{
+  background-color: rgb(10, 243, 154);
+}
+.fondo3{
+  background-color: rgb(62, 128, 167);
+}
+.fondo4{
+  background-color: rgb(190, 152, 69);
+}
+.fondo5{
+  background-color: rgb(39, 214, 48);
+}
+
+/* Media query para cambiar a 2 filas y 6 columnas y suci */
+/*el screen and no es necesario*/
+@media screen and (max-width: 992px) {
+    .col {
+      width: calc(100% / 6);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .col {
+      width: calc(100% / 4);
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .col {
+      width: calc(100% / 3);
+    }
+  }

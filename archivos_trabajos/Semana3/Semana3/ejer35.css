@@ -1,0 +1,108 @@
+
+.texto{
+    position: absolute;/*hace ubicar arriba encima de la foto*/
+    top: 200px;
+    left: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 320px;
+}
+.texto h2{
+    font-size: 28px;
+    color: rgb(247, 248, 248);
+}
+.buton{
+    padding: 15px 30px;
+    font-size: 15px;
+    border-radius: 6px;
+    font-weight: bold;/*oone en negrita*/
+}
+.btnceleste{
+    color: #fff;
+    background-color: rgb(37, 173, 207);
+    border: none;
+}
+
+.btnsinfondo{
+    color: #fff;
+    background-color: rgba(77, 75, 75, 0);
+    border-color: #fff;
+}
+
+
+
+.slide {
+     transition: transform 0.5s ease-in-out;
+                        
+  }
+.seccion1{
+    padding: 20px;
+    background-image: url('img34/barras.jpg');
+    /*background-color: rgba(77, 75, 75, 0.5);*/
+    background-size: cover; /* para ajustar la imagen al tamaño de la pantalla */
+    background-repeat: no-repeat;
+}
+
+.seccion2{
+    padding: 30px;
+}
+
+.seccion3{
+    margin-top: 10px;
+    display: block;
+    justify-content: center;
+}
+.seccion3 h2{
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    border: 1px solid rgb(73, 108, 204);
+}
+.bolas{
+    justify-content: center;
+}
+
+@media (max-width:960px){
+    
+.texto{
+    
+    top: 110px;
+    left: 100px;
+    
+    width: 320px;
+}
+.texto h2{
+    font-size: 20px;
+    color: rgb(247, 248, 248);
+}
+.buton{
+    padding: 10px 20px;
+    font-size: 12px;
+}
+
+}
+
+@media (max-width:760px){
+    
+    .texto{
+        
+        top: 90px;
+        left: 120px;
+        
+        width: 200px;
+    }
+    .texto h2{
+        font-size: 15px;
+    }
+    .texto p{
+        font-size: 6px;
+    }
+    .buton{
+        padding: 6px 14px;
+        font-size: 10px;
+    }
+    
+    }

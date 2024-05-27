@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    /*background: #7639bb;*/
+    /*background: linear-gradient(to right, #ff7e5f, #feb47b);*/  /*para degradar un color*/
+    background: linear-gradient(to right,#b463e4, #803cce);
+}
+/*opciones ENCABEZADO VARIA POR BOOOPSTRAP***********/
+header{
+    background: #181717;
+    display: flex;
+    justify-content: space-between;
+    height: 65px; /*AUMENTADO `POR BOOPSTEAP*/
+}
+
+header h2{
+    color: #7639bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.opciones li{
+    display: inline-block;
+}
+
+.opciones a{
+    text-decoration: none;
+    color:#fcfaf5;
+    display: block;
+    padding: 20px 10px; /*le ponemos un cuadrado*/
+    font-size: 14px;
+}
+
+.tituloRe h1{
+    padding: 10px;
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+}

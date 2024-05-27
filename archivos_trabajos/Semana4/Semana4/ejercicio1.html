@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="general.css">
+</head>
+<body>
+    <h3>EJERCICIO 1 - mi solucion</h3>
+    <p id="texto">Hola</p>
+    <button onclick="actualizarHora()">Actualizar Hora</button>
+
+    <script>
+        function actualizarHora() {
+            var parrafo = document.getElementById('texto');
+            var fecha = new Date();
+            var hora = fecha.getHours();
+            var minutos = fecha.getMinutes();
+            var segundos = fecha.getSeconds();
+            var horaActual = hora + ":" + minutos + ":" + segundos;
+            parrafo.textContent = "La hora actual es: " + horaActual;
+        }
+    </script>
+
+    <h3>EJERCICIO 1 - solucion del profesor Manipular el html con un click</h3>
+    <p id="parrafo1">Texto1</p>
+    <button type="button" onclick="modificandoDom()" class="btn succes">hacer click</button>
+    <script>
+        function modificandoDom(){
+            let parrafo1=document.getElementById('parrafo1');
+            parrafo1.innerHTML='cambiando el DOM'+ Date();
+        }
+    </script>
+
+    <h3>Ejercicio 2- Manipular html con un AddEventListener</h3>
+    <form action="">
+        <label for="">Ingrese texto:</label>
+        <input type="text" name="" id="idinput">
+        <p id="idparrafo">texto2</p>
+    </form>
+
+    <script>
+        let txt=document.getElementById("idinput");
+        txt.addEventListener("keyup",cambiandoParrafo);
+        function cambiandoParrafo(){
+            let parrafo1=document.getElementById("idparrafo");
+            parrafo1.innerHTML=txt.value;
+        }
+    </script>
+
+    
+
+    <h3>Ejercicio 3 solucuion profe</h3>
+    <form action="">
+        <label for="field1">X</label>
+        <input type="text" id="num1" value="">
+        <label for="field2">Y</label>
+        <input type="text" id="num2" value="">
+        <button type="button" onclick="calculateSuma()">Sumar</button>
+        <p id="sumando">Result</p>
+    </form>
+
+    <script>
+        function calculateSuma(){
+            let x,y,suma,text;
+            x=document.getElementById("num1").value;
+            y=document.getElementById("num2").value;
+            if(isNaN(x)|| isNaN(y)){
+                text="necesario numeros"
+            } else{
+                suma=parseFloat(x)+parseFloat(y);
+                text=suma;
+            }
+            document.getElementById("sumando").innerHTML="result:" +text;
+        }
+    </script>
+
+    <h3>Ejercicio 4 solucuion mia</h3>
+    <button id="actualizarTabla">Actualizar Tabla</button>
+    <table id="tablaEstudiantes">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Apellidos</th>
+                <th>Nombres</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los datos de los estudiantes se añadirán aquí dinámicamente -->
+        </tbody>
+    </table>
+    <script>
+        class Estudiante {
+    constructor(id, apellidos, nombres, direccion, telefono) {
+        this.id = id;
+        this.apellidos = apellidos;
+        this.nombres = nombres;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Crear un array con 10 objetos Estudiante
+    var arraysEstudiantes = [
+        [
+            new Estudiante(1, "García", "Juan", "Calle 123", "123456789"),
+            new Estudiante(2, "López", "María", "Avenida 456", "987654321"),
+            new Estudiante(3, "Martínez", "Pedro", "Carrera 789", "456123789"),
+            // Añade los datos de los otros estudiantes del primer array aquí
+        ],
+        [
+            new Estudiante(4, "Hernández", "Ana", "Avenida 789", "987654321"),
+            new Estudiante(5, "Díaz", "Carlos", "Calle 456", "123456789"),
+            new Estudiante(6, "Rodríguez", "Laura", "Carrera 123", "456123789"),
+            // Añade los datos de los otros estudiantes del segundo array aquí
+        ],
+        // Añade otros arrays de estudiantes si es necesario
+    ];
+
+    // Obtener el cuerpo de la tabla
+    var tablaBody = document.querySelector("#tablaEstudiantes tbody");
+    
+    // Inicializar el índice para controlar qué array de estudiantes mostrar
+    var indiceArray = 0;
+
+    // Función para actualizar la tabla con los datos del array actual
+    function actualizarTabla() {
+        // Limpiar la tabla antes de actualizar
+        tablaBody.innerHTML = "";
+
+        // Obtener el array de estudiantes actual según el índice
+        var estudiantes = arraysEstudiantes[indiceArray];
+
+        // Iterar sobre el array de estudiantes y agregar cada estudiante a la tabla
+        estudiantes.forEach(function(estudiante) {
+            var fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${estudiante.id}</td>
+                <td>${estudiante.apellidos}</td>
+                <td>${estudiante.nombres}</td>
+                <td>${estudiante.direccion}</td>
+                <td>${estudiante.telefono}</td>
+            `;
+            tablaBody.appendChild(fila);
+        });
+
+        // Incrementar el índice para mostrar el próximo array en el siguiente clic
+        indiceArray = (indiceArray + 1) % arraysEstudiantes.length;
+    }
+
+    // Llamar a la función actualizarTabla al cargar la página
+    actualizarTabla();
+
+    // Asignar el evento click al botón para actualizar la tabla
+    var botonActualizar = document.getElementById("actualizarTabla");
+    botonActualizar.addEventListener("click", actualizarTabla);
+});
+    </script>
+    
+
+</body>
+</html>

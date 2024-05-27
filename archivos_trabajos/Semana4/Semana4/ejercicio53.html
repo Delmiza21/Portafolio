@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Estudiantes</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tabla de Estudiantes</h2>
+    <table id="tablaEstudiantes">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Apellidos</th>
+                <th>Nombres</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los datos de los estudiantes se agregarán aquí mediante JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        class Estudiante {
+    constructor() {
+        this._id = null;
+        this._apellidos = null;
+        this._nombres = null;
+        this._direccion = null;
+        this._telefono = null;
+    }
+
+    set id(value) {
+        this._id = value;
+    }
+
+    set apellidos(value) {
+        this._apellidos = value;
+    }
+
+    set nombres(value) {
+        this._nombres = value;
+    }
+
+    set direccion(value) {
+        this._direccion = value;
+    }
+
+    set telefono(value) {
+        this._telefono = value;
+    }
+
+    get id() {
+        return this._id;
+    }
+
+    get apellidos() {
+        return this._apellidos;
+    }
+
+    get nombres() {
+        return this._nombres;
+    }
+
+    get direccion() {
+        return this._direccion;
+    }
+
+    get telefono() {
+        return this._telefono;
+    }
+}
+
+class TablaEstudiantes {
+    constructor(estudiantes) {
+        this.estudiantes = estudiantes;
+    }
+
+    llenarTabla() {
+        const tabla = document.getElementById("tablaEstudiantes").getElementsByTagName('tbody')[0];
+        this.estudiantes.forEach(estudiante => {
+            let fila = tabla.insertRow();
+            fila.innerHTML = `
+                <td>${estudiante.id}</td>
+                <td>${estudiante.apellidos}</td>
+                <td>${estudiante.nombres}</td>
+                <td>${estudiante.direccion}</td>
+                <td>${estudiante.telefono}</td>
+            `;
+        });
+    }
+}
+
+// Crear un array con objetos de tipo Estudiante
+let estudiantes = [];
+
+// Asignar valores a los estudiantes
+for (let i = 1; i <= 10; i++) {
+    let estudiante = new Estudiante();
+    estudiante.id = i;
+    estudiante.apellidos = "Apellido" + i;
+    estudiante.nombres = "Nombre" + i;
+    estudiante.direccion = "Dirección " + i;
+    estudiante.telefono = "123456789" + i;
+    estudiantes.push(estudiante);
+}
+
+// Crear una instancia de TablaEstudiantes y llenar la tabla
+let tablaEstudiantes = new TablaEstudiantes(estudiantes);
+tablaEstudiantes.llenarTabla();
+
+    </script>
+</body>
+</html>
