@@ -4,16 +4,13 @@
     
 }
 body{
-    /*background: #7639bb;*/
-    /*background: linear-gradient(to right, #ff7e5f, #feb47b);*/  /*para degradar un color*/
-    /* background: linear-gradient(to right,#e463a3, #cc38c5); */
-    /* background-color: rgb(53, 50, 50); */
     
-    background-image: url(imagenes/trabajos.webp);
+    
+    /* background-image: url(imagenes/trabajoimg.webp);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    
+    background-size: cover; */
+    background-color: #575656;
 }
 /*opciones ENCABEZADO***********/
 header{
@@ -45,14 +42,25 @@ header h2{
 
 /*TRABAJOS REALIZADOS*/
 .trabajo{
-    height: 200px;
+    height: 330px;
+    display: flex;
+   
+}
+.imgTrabajo{
+    padding: 20px;
+}
+.imgTrabajo img{
+    height: 250px;
+    width: 550px;
+    border-radius: 7px;
 }
 .impar{
-    background: linear-gradient(to right,#b463e4, #803cce);
+    /* background: linear-gradient(to right,#d8cfdd, #7a7381); */
+    background-color: #858585;
 }
 .par .pregunta{
-    background: rgba(34, 31, 31, 0.5);
-    height: 200px;
+    /* background: rgba(34, 31, 31, 0.5); */
+    height: 290px;
 }
 .pregunta{
     padding: 20px 35px;
@@ -64,6 +72,8 @@ header h2{
 .pregunta p{
     margin-bottom: 10px;
 }
+
+
 .btn{
     padding: 16px;
     border-radius: 6px;

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 13</title>
+    <link rel="stylesheet" href="/semanas.css">
+</head>
+<body>
+    <header>
+        <h2>DEEI</h2>
+        <nav class="opciones">
+            <ul>
+                <li><a href="/index.html">PORTADA</a></li>
+                <li><a href="/opciones/bienvenido.html">BIENVENIDO</a></li>
+                <li><a href="/opciones/cuaderno.html">CUADERNO PERSONAL</a></li>
+                <li><a href="/opciones/sobremi.html">SOBRE MI</a></li>
+                <li><a href="/opciones/trabajos_realizados.html">TRABAJOS REALIZADOS</a></li>
+                <li><a href="/opciones/conclusion.html">CONCLUSION</a></li>
+                <li><a href="/opciones/reflexion.html">REFLEXION</a></li>
+                <li><a href="/opciones/biografia.html">BIOGRAFIA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="definicion">
+        <h1>TOMCAT Y JSP</h1>
+        <div class="inicio">
+            <div class="parte1">
+                <p>En esta semana 13 hablaremos acerca de TOMCAT y JSP<br>
+                <h2><span>DEFINICIONES</span></h2><hr><br>
+
+                <span>Cliente en JSP:</span> <br>
+                En JSP, el término "cliente" se refiere al navegador web o aplicación que solicita una página
+                 web al servidor Tomcat. El cliente envía una solicitud HTTP al servidor Tomcat que contiene 
+                 la URL de la página JSP solicitada. El servidor Tomcat procesa esta solicitud, ejecuta la 
+                 lógica de la página JSP si es necesario (como consultar una base de datos), y luego genera
+                  una respuesta HTML dinámica que se envía de vuelta al cliente para ser renderizada en el
+                   navegador web.<br><br>
+
+                <span>Apache Tomcat:</span> Es un servidor web y contenedor servlet de código
+                   abierto desarrollado por la Apache Software Foundation. Tomcat actúa como un servidor web
+                    que sirve páginas web estáticas y dinámicas y también funciona como un contenedor servlet
+                     que implementa las especificaciones de Java Servlet, JavaServer Pages (JSP), y 
+                     Java Expression Language (EL). <br>
+
+                <span>Relación entre JSP y Tomcat:</span>Cuando un cliente solicita una página JSP a través 
+                de Tomcat, Tomcat es responsable de procesar esa solicitud, compilar el código JSP en un
+                 servlet Java, ejecutar ese servlet para generar contenido dinámico (como consultas a bases
+                  de datos o lógica de negocio), y finalmente enviar la respuesta HTML resultante de vuelta
+                   al cliente. Tomcat actúa como el servidor que interpreta y ejecuta el código JSP, 
+                   facilitando así la generación dinámica de contenido web basado en Java<br>
+
+                <span>Metodos HTTP:</span>GET, POST, PUT y DELETE se utilizan para determinar la forma en que
+                 se procesa una solicitud HTTP enviada desde el cliente al servidor. <br>
+                 <br>
+                 <ul>
+                    <li>GET: Este método se utiliza para solicitar datos del servidor. En JSP, cuando se
+                         recibe una solicitud GET, los parámetros de la solicitud pueden ser accesibles 
+                         a través del objeto</li>
+                    <li>POST: Este método se utiliza para enviar datos al servidor, generalmente a través de
+                         un formulario HTML en una página JSP. En este caso, los datos enviados por el cliente
+                          pueden ser accesibles a través del objeto</li>
+                    <li>PUT y DELETE: Estos métodos HTTP son menos comunes en formularios HTML estándar, 
+                        pero pueden ser utilizados en aplicaciones web más avanzadas o cuando se trabaja 
+                        con APIs RESTful.</li>
+                 </ul>
+                
+            </div>
+            <div class="img">
+                <img src="/imagenes/curso13_x.png" alt="semana1_img">
+                
+            </div>
+        </div>
+    </div>
+    <div class="procedimento">
+        <h2><span>PROCEDIMIENTO</span></h2><hr><br>
+        <p>Para esta semana el procedimiento que se tuvo en cuenta fue aplicar conocimientos en JSP como:<br><br>
+            <ul>
+                <li>Utilizar archivos JSP con codigo html</li>
+                <li>Utilizar lenguaje JAVA </li>
+                <li>Realizar conexión a base de datos</li>
+                <li>Usar metodo GET, POST, PUT, DELETE</li>
+            </ul>
+        </p>
+        <div class="img2">
+            <img src="/imagenes/ejemplo_s13.png" alt="semana1_img"> 
+        </div>
+        <br>
+    </div>
+    <div class="resultado">
+        <h2><span>RESULTADOS</span></h2><hr><br>
+        <p>Con la practica y la guia del ingeniero pudimos obtener los siguientes resultados: <br><br>
+            <ul>
+                <li>Realizar pagina web haciendo uso de JSP y HTML</li>
+                <li>Usar metodos GET y POST , ademas de diferenciarlos</li>
+                <li>Hacer uso de formularios donde se envien el metodo de GET y POST</li>
+                <li>Realizar un CRUD conectado a una Base de datos con JAVA</li>
+            </ul>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Diseñar y desarrolle una API REST para realizar las operaciones CRUD 
+desde y hacia una base de datos de 3 tablas departamento(id, name), 
+provincia(id, name) y distrito(id, name).
+Ademas agregar una aplicación para la visualización

@@ -39,7 +39,7 @@ header h2{
 }
 
 /*SEMANA 1*/
-.definicion{
+/* .definicion{
     font-family: "Crimson Text", serif;
     padding: 20px;
     color: #fcfaf5;
@@ -94,6 +94,97 @@ header h2{
 }
 .resultado span{
     color: #e2123f;
+}
+ */
+/* Estilos para la clase .definicion */
+.definicion {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    border: 1px solid #ccc; /* Borde sólido gris */
+    padding: 20px; /* Espacio interno */
+    background-color: #f9f9f9; /* Color de fondo */
+}
+.definicion h1{
+    text-align: center;
+}
+
+/* Estilos para .inicio */
+.inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Estilos para .parte1 dentro de .inicio */
+.parte1 {
+    width: 70%;
+    padding-right: 20px;
+    background-color: #fff; /* Color de fondo */
+    border: 1px solid #ccc; /* Borde sólido gris */
+    padding: 20px; /* Espacio interno */
+    margin-bottom: 20px; /* Margen inferior */
+}
+.parte1 span{
+    color: #3405a1;
+    font-weight: bold;
+}
+/* Estilos para .img dentro de .inicio */
+.img {
+    width: 30%;
+    background-color: #fff; /* Color de fondo */
+    border: 1px solid #ccc; /* Borde sólido gris */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Asegura que el tamaño total incluya el padding y border */
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para .procedimento */
+.procedimento {
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+    background-color: #f9f9f9; /* Color de fondo */
+    border: 1px solid #ccc; /* Borde sólido gris */
+    padding: 20px; /* Espacio interno */
+    margin: 20px;
+}
+.procedimento span{
+    color: #3405a1;
+    font-weight: bold;
+}
+/* Estilos para .img2 dentro de .procedimento */
+.img2 {
+    margin-top: 20px;
+    background-color: #fff; /* Color de fondo */
+    border: 1px solid #ccc; /* Borde sólido gris */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Asegura que el tamaño total incluya el padding y border */
+}
+
+.img2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para .resultado */
+.resultado {
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+    background-color: #f9f9f9; /* Color de fondo */
+    border: 1px solid #ccc; /* Borde sólido gris */
+    padding: 20px; /* Espacio interno */
+    margin: 20px;
+}
+.resultado h2 span{
+    color: #3405a1;
 }
 
 
